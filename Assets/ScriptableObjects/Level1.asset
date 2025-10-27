@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badcc016a57393b43b3bb295802c08c8, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelName: Level1
+  spawnPosition: {x: 0, y: 0, z: 0}
+  spawnRotation: {x: 0, y: 0, z: 0}
+  walls:
+  - {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+  - {fileID: 829936146848342245, guid: 996b06d9144614a49851593aa6f31c88, type: 3}
+  - {fileID: 7439273277484653965, guid: 9ffa87aa45bffb64f96177c38785e2ce, type: 3}
+  - {fileID: 9018239010139987921, guid: 61b8c1ead17001a4e90e48664137e2ca, type: 3}
+  enemies:
+  - {fileID: 9092613580005261777, guid: d78c02b5a8ba25e4689f7133472b209b, type: 3}
+  items:
+  - {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}

@@ -1,0 +1,78 @@
+# ===== Unity Generated Folders =====
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Autres fichiers générés
+sysinfo.txt
+
+# ===== Visual Studio / Rider =====
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+*.pidb.meta
+
+# Rider
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ===== Unity Cache Server =====
+/[Cc]ache/
+
+# ===== OS Files =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===== Crash / temp / backup files =====
+*.log
+*.log.*
+*.bak
+*.swp
+*.tmp
+
+# ===== Unity auto-generated files =====
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+
+# ===== UserSettings (optionnel mais recommandé) =====
+/UserSettings/
+
+# ===== Packages =====
+/Packages/manifest.json
+/Packages/packages-lock.json
+
+# ===== Version Control for Large Assets (optionnel Git LFS) =====
+# *.png filter=lfs diff=lfs merge=lfs -text
+# *.jpg filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+# *.tga filter=lfs diff=lfs merge=lfs -text
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.wav filter=lfs diff=lfs merge=lfs -text
+# *.mp3 filter=lfs diff=lfs merge=lfs -text
+# *.mp4 filter=lfs diff=lfs merge=lfs -text
+# *.mov filter=lfs diff=lfs merge=lfs -text
