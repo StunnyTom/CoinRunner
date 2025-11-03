@@ -20,12 +20,15 @@ public class CharaControl : MonoBehaviour
     public string paramWalking = "IsWalking";
     public string paramSprinting = "IsSprinting";
 
-    private int coinCounter = 0;
+    [Header("Caméra TPS")]
+    public float lookSpeed = 0.2f;
 
-    int hashWalking = -1;
-    int hashSprinting = -1;
-    bool hasWalkingParam = false;
-    bool hasSprintingParam = false;
+
+    private int hashWalking = -1;
+    private int hashSprinting = -1;
+    private bool hasWalkingParam = false;
+    private bool hasSprintingParam = false;
+
 
     private void Start()
     {
@@ -48,14 +51,11 @@ public class CharaControl : MonoBehaviour
                     hashSprinting = p.nameHash; hasSprintingParam = true;
                 }
             }
-            if (!hasWalkingParam) Debug.LogWarning($"Animator on {name} has no boolean param matching '{paramWalking}' (case-insensitive).\nAnimator params: {string.Join(", ", System.Array.ConvertAll(pars, x=>x.name))}");
-            if (!hasSprintingParam) Debug.LogWarning($"Animator on {name} has no boolean param matching '{paramSprinting}' (case-insensitive).\nAnimator params: {string.Join(", ", System.Array.ConvertAll(pars, x=>x.name))}");
         }
     }
 
     private void Awake()
     {
-        // Instancie la classe générée par ton .inputactions
         controls = new PlayerInputActions();
     }
 
@@ -71,17 +71,29 @@ public class CharaControl : MonoBehaviour
 
     private void Update()
     {
+        CheckEnemyCollision();
         HandleMovement();
         HandleGravity();
+        HandleLook();
+        HandleMenuInput();
     }
+
+    private void HandleLook()
+    {
+        Vector2 lookInput = controls.PlayerControls.Look.ReadValue<Vector2>();
+
+        // Rotation horizontale du joueur
+        transform.Rotate(Vector3.up * lookInput.x * lookSpeed);
+    }
+
 
     private void HandleMovement()
     {
+        // Récupération du mouvement depuis l'Event System / Input System
         Vector2 moveInput = controls.PlayerControls.Move.ReadValue<Vector2>();
-        float droitegauche = moveInput.x;
-        float avantarr = moveInput.y;
+        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
 
-        // Sprint detection (Left Shift) - support new Input System and legacy
+        // Sprint (via Left Shift)
         bool sprintPressed = false;
         #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
             var kb = Keyboard.current;
@@ -89,27 +101,15 @@ public class CharaControl : MonoBehaviour
         #else
             sprintPressed = Input.GetKey(KeyCode.LeftShift);
         #endif
-        isSprinting = sprintPressed;
+            isSprinting = sprintPressed;
 
         float speed = moveSpeed * (isSprinting ? sprintMultiplier : 1f);
 
-        // Déplacement horizontal avant/arrière
-        Vector3 forwardMove = transform.forward * avantarr;
-        controller.Move(forwardMove * speed * Time.deltaTime);
+        // Déplacement du CharacterController
+        controller.Move(move * speed * Time.deltaTime);
 
-        // Rotation seulement sur l'axe Y selon X
-        if (Mathf.Abs(droitegauche) > 0.001f)
-        {
-            const float rotationSpeed = 320f;
-
-            // On calcule la rotation cible relative à l'orientation actuelle
-            float targetY = transform.eulerAngles.y + droitegauche * 90f;
-            Quaternion targetRot = Quaternion.Euler(0f, targetY, 0f);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotationSpeed * Time.deltaTime);
-        }
-
-        // Animation
-        bool walking = moveInput.sqrMagnitude > 0.0001f;
+        // Gestion de l'animation
+        bool walking = moveInput.sqrMagnitude > 0.01f;
         if (animator != null)
         {
             if (hasWalkingParam) animator.SetBool(hashWalking, walking);
@@ -117,19 +117,72 @@ public class CharaControl : MonoBehaviour
         }
     }
 
+
     private void HandleGravity()
     {
-        // Vérifier si le personnage touche le sol (approximatif)
-        isGrounded = controller.transform.position.y <= 0.2f;
+        // Vérifie si l'ennemi touche le sol
+        isGrounded = controller.isGrounded;
 
-        // Appliquer une petite vitesse négative au sol pour rester collé (utile à l'arrêt)
-        if (isGrounded)
+        if (isGrounded && velocity.y < 0)
+        {
+            // On remet une petite valeur négative pour "coller" au sol sans rebond
             velocity.y = -2f;
+        }
+        else
+        {
+            // Sinon on applique une accélération progressive
+            velocity.y += Physics.gravity.y * Time.deltaTime;
+        }
 
-        // Appliquer la gravité
-        velocity.y += Physics.gravity.y * Time.deltaTime;
-
-        // Déplacement vertical
+        // Applique la gravité au CharacterController
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void HandleMenuInput()
+    {
+        bool pause = false;
+        #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
+            var kb = Keyboard.current;
+            if (kb != null) pause = kb.mKey.isPressed;
+        #else
+            pause = Input.GetKey(KeyCode.M);
+        #endif
+        
+        Debug.Log("Pause key pressed: " + pause);
+
+        if (pause)
+        {
+            GameObject pauseMenu = GameObject.Find("PauseMenu");
+            if (pauseMenu != null)
+            {
+                pauseMenu.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("PauseMenu introuvable dans la scène.");
+            }
+        }
+    }
+
+
+    private void CheckEnemyCollision()
+    {
+        if (GameManager.Instance.levelWon)
+        {
+            Debug.Log("Level already won, skipping enemy collision check.");
+            return;
+        }
+
+        // On récupère tous les colliders sur la couche Enemy dans un rayon de 0.5 à 1 unité
+        Collider[] hits = Physics.OverlapSphere(transform.position, 0.8f, LayerMask.GetMask("Enemy"));
+        //Debug.Log($"Enemy collision check: found {hits.Length} enemies nearby.");
+        if (hits.Length > 0)
+        {
+            // On déclenche la défaite
+            GameManager.Instance.ShowLoseScreen();
+            
+            // Bloquer le joueur pour éviter de continuer
+            controller.enabled = false;
+        }
     }
 }

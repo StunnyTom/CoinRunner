@@ -12,7 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: badcc016a57393b43b3bb295802c08c8, type: 3}
   m_Name: Level2
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
-  levelName: 
-  walls: []
-  enemies: []
-  items: []
+  levelName: Level 2
+  spawnPosition: {x: 0, y: 0, z: -15}
+  spawnRotation: {x: 0, y: 0, z: 0}
+  walls:
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: -5, y: 2.5, z: -15}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: 5, y: 2.5, z: -15}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: 5, y: 2.5, z: 10}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: -5, y: 2.5, z: 20}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: 15, y: 2.5, z: 20}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: 25, y: 2.5, z: 5}
+    rotation: {x: 0, y: 90, z: 0}
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: -15, y: 2.5, z: 2.5}
+    rotation: {x: 0, y: 90, z: 0}
+  enemies:
+  - prefab: {fileID: 235643248612311710, guid: ed0b27e92cc2ed94a8ffe44594aea87d, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 235643248612311710, guid: ed0b27e92cc2ed94a8ffe44594aea87d, type: 3}
+    position: {x: 12.5, y: 0, z: -5}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 3339091220981604441, guid: 2d9170fd9e60d2842bfa85a920ab164f, type: 3}
+    position: {x: -10, y: 0, z: -10}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 3339091220981604441, guid: 2d9170fd9e60d2842bfa85a920ab164f, type: 3}
+    position: {x: 10, y: 0, z: 12.5}
+    rotation: {x: 0, y: 0, z: 0}
+  items:
+  - prefab: {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}
+    position: {x: 17.5, y: 1, z: 15}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}
+    position: {x: -15, y: 1, z: 15}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}
+    position: {x: 15, y: 1, z: -15}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}
+    position: {x: -15, y: 1, z: -15}
+    rotation: {x: 0, y: 0, z: 0}

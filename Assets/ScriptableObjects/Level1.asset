@@ -13,14 +13,29 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelName: Level1
-  spawnPosition: {x: 0, y: 0, z: 0}
+  spawnPosition: {x: 0, y: 0, z: -6}
   spawnRotation: {x: 0, y: 0, z: 0}
   walls:
-  - {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
-  - {fileID: 829936146848342245, guid: 996b06d9144614a49851593aa6f31c88, type: 3}
-  - {fileID: 7439273277484653965, guid: 9ffa87aa45bffb64f96177c38785e2ce, type: 3}
-  - {fileID: 9018239010139987921, guid: 61b8c1ead17001a4e90e48664137e2ca, type: 3}
+  - prefab: {fileID: 995133070615692317, guid: 5bd53763c33457b42a6c28bbfd3b5877, type: 3}
+    position: {x: 0, y: 2.5, z: -10}
+    rotation: {x: 0, y: 90, z: 0}
+  - prefab: {fileID: 829936146848342245, guid: 996b06d9144614a49851593aa6f31c88, type: 3}
+    position: {x: 0, y: 2.5, z: 10}
+    rotation: {x: 0, y: 90, z: 0}
+  - prefab: {fileID: 7439273277484653965, guid: 9ffa87aa45bffb64f96177c38785e2ce, type: 3}
+    position: {x: 10, y: 2.5, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 9018239010139987921, guid: 61b8c1ead17001a4e90e48664137e2ca, type: 3}
+    position: {x: -10, y: 2.5, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
   enemies:
-  - {fileID: 9092613580005261777, guid: d78c02b5a8ba25e4689f7133472b209b, type: 3}
+  - prefab: {fileID: 9092613580005261777, guid: d78c02b5a8ba25e4689f7133472b209b, type: 3}
+    position: {x: 6, y: 0.5, z: 0}
+    rotation: {x: 0, y: -90, z: 0}
   items:
-  - {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}
+  - prefab: {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}
+    position: {x: -5, y: 0.7, z: 5}
+    rotation: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 527300963729540294, guid: 93e117ccac98b6b429d805199fb57a11, type: 3}
+    position: {x: -5, y: 0.7, z: 5}
+    rotation: {x: 0, y: 0, z: 0}

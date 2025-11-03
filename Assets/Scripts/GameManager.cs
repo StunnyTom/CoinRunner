@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -6,8 +7,14 @@ public class GameManager : MonoBehaviour
 
     public int coinCounter = 0;
     public int coinsInLevel = 0;
+    // Indique si le niveau a déjà été gagné
+    public bool levelWon = false;
+
+    public static event Action OnLevelWon;
+    public static event Action OnLevelLost;
 
     public GameObject winScreen;
+    public GameObject loseScreen;
 
     private void Awake()
     {
@@ -38,10 +45,36 @@ public class GameManager : MonoBehaviour
 
     private void ShowWinScreen()
     {
+        // Marquer le niveau comme gagné pour empêcher une défaite après coup
+        levelWon = true;
         if (winScreen != null)
             winScreen.SetActive(true);
 
         Time.timeScale = 0f;
+        OnLevelWon?.Invoke();
         Debug.Log("Level Completed!");
+    }
+
+    // Affichage de la défaite
+    public void ShowLoseScreen()
+    {
+        if (loseScreen != null)
+            loseScreen.SetActive(true);
+
+        Time.timeScale = 0f;
+        OnLevelLost?.Invoke();
+        Debug.Log("Player Defeated!");
+    }
+
+    // Appelé quand un nouveau niveau est lancé
+    public void ResetGameState()
+    {
+        Time.timeScale = 1f;
+
+        // Réinitialiser le drapeau de victoire
+        levelWon = false;
+
+        if (winScreen != null) winScreen.SetActive(false);
+        if (loseScreen != null) loseScreen.SetActive(false);
     }
 }

@@ -19,25 +19,28 @@ public class Cam : MonoBehaviour
     {
         if (target == null) return;
 
-        // Desired rotation 
+        // Rotation désirée de la caméra
         Quaternion desiredRot = Quaternion.Euler(20f, target.eulerAngles.y, 0f);
         transform.rotation = Quaternion.Slerp(transform.rotation, desiredRot, rotationSmooth * Time.deltaTime);
 
-        // Desired camera position
+        // Position désirée de la caméra 
         Vector3 desiredPos = target.position + desiredRot * offset;
 
-        // CHECK COLLISION VIA RAYCAST
-        Vector3 direction = desiredPos - target.position;
+        // --- COLLISION CHECK ---
+        // On élève le point de départ du raycast pour éviter les petits rebords / le sol
+        Vector3 rayOrigin = target.position + Vector3.up * 0.5f;  
+        Vector3 direction = desiredPos - rayOrigin;
         float distance = direction.magnitude;
         direction.Normalize();
 
-        // If raycast hits something, reposition camera at hit point
-        if (Physics.SphereCast(target.position, cameraRadius, direction, out RaycastHit hit, distance, collisionMask))
+        // Si on touche un obstacle, on recule légèrement la caméra
+        if (Physics.SphereCast(rayOrigin, cameraRadius, direction, out RaycastHit hit, distance, collisionMask))
         {
             desiredPos = hit.point + hit.normal * cameraRadius;
         }
 
-        // Smooth camera follow
+        // --- Smoothing ---
         transform.position = Vector3.Lerp(transform.position, desiredPos, positionSmooth * Time.deltaTime);
     }
+
 }

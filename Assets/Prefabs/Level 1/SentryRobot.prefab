@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6695501783796298134}
   - component: {fileID: 244086681953818382}
   - component: {fileID: 4735452511666605529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Back_Right_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6659138982071065988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Upper_Front_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 3476947591118599711}
   - component: {fileID: 6910533158322479921}
   - component: {fileID: 748158573282973663}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8927435811722528900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Back_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 7411380833759707318}
   - component: {fileID: 6081860928876789731}
   - component: {fileID: 2158253164281832361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Right_Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6721488995694274074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Lower_Front_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 7712233412745475748}
   - component: {fileID: 5787698335234937573}
   - component: {fileID: 8881565629734257592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Back_Left_Upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 2884807129248766311}
   - component: {fileID: 4382075941785562979}
   - component: {fileID: 9198680539909898629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 2626976893199973705}
   - component: {fileID: 6177838967463159478}
   - component: {fileID: 3237558880355746756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Front_Right_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 6453362591374054947}
   - component: {fileID: 5030584791274668892}
   - component: {fileID: 5066711342406013432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Front_Right_Toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 1662709314896026992}
   - component: {fileID: 779634938759548166}
   - component: {fileID: 1560601136216569455}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Left_Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6420540569120771800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Body_Lower_Front_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5453776517279096595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Body_Lower_Back_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1070,7 +1070,7 @@ GameObject:
   - component: {fileID: 6412340472450498599}
   - component: {fileID: 1289374593894984719}
   - component: {fileID: 3055448932106279694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1307345784437832668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Back_Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 3549718346792315533}
   - component: {fileID: 4889890663321313738}
   - component: {fileID: 2395767597038392583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Back_Left_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1338,7 +1338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8841214289593817286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Front_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1371,7 +1371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5925687173761907565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Back_Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1402,7 +1402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 680514445042142260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Upper_Back_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1435,7 +1435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6836207091081250504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RIg_Body_Upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 1909377963063918232}
   - component: {fileID: 9211653227983938972}
   - component: {fileID: 5892903914350489277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1566,9 +1566,9 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.15901582
   m_Height: 1.7228642
@@ -1583,7 +1583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 324376443606653640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Body_Lower_Back_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 222149930468275833}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Lower_Back_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1648,7 +1648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2854996727826463551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Front_Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,7 +1682,7 @@ GameObject:
   - component: {fileID: 7678286427683630548}
   - component: {fileID: 6610265797455031242}
   - component: {fileID: 4948453536798036618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Back_Right_Toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1791,7 +1791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5969932119933545467}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Lower_Front_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509508964515307806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Front_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5090917132533308662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Front_Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,7 +1891,7 @@ GameObject:
   - component: {fileID: 2780670794252839396}
   - component: {fileID: 1964558598878036713}
   - component: {fileID: 287458367057684750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpperBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2000,7 +2000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8971165246856315217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Toe_Back_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2036,7 +2036,7 @@ GameObject:
   - component: {fileID: 1651551690041961965}
   - component: {fileID: 5662943453777333154}
   - component: {fileID: 2040099246600716245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Front_Right_Upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2145,7 +2145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8732989668508875280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Upper_Front_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,7 +2181,7 @@ GameObject:
   - component: {fileID: 2069397078830596922}
   - component: {fileID: 8912265185998211632}
   - component: {fileID: 637528161501053518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Back_Left_Toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2293,7 +2293,7 @@ GameObject:
   - component: {fileID: 8987782084274123553}
   - component: {fileID: 185406978200641331}
   - component: {fileID: 3907430338501007533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Front_Left_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2402,7 +2402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268393630984356750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Body_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2442,7 +2442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1075675735523705083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Body_Lower_Front_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2477,7 +2477,7 @@ GameObject:
   - component: {fileID: 1061996514003345586}
   - component: {fileID: 8647869566152669927}
   - component: {fileID: 4315836003763671236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Back_Right_Upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2589,7 +2589,7 @@ GameObject:
   - component: {fileID: 9012649724475106830}
   - component: {fileID: 2490736386588487502}
   - component: {fileID: 7539845635735654052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Front_Left_Toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2701,7 +2701,7 @@ GameObject:
   - component: {fileID: 3055721074340821282}
   - component: {fileID: 4253585696127527157}
   - component: {fileID: 2093757266951337166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Front_Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2813,7 @@ GameObject:
   - component: {fileID: 1899680565875039549}
   - component: {fileID: 3230598652244138676}
   - component: {fileID: 7267186105683757777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Front_Left_Upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2922,7 +2922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7096277831043920205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Upper_Back_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2955,7 +2955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5122668018460670194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig_Leg_Lower_Back_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2990,7 +2990,7 @@ GameObject:
   - component: {fileID: 6510273753751645500}
   - component: {fileID: 8637799573596955153}
   - component: {fileID: 7644276004071403381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SentryRobot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3026,6 +3026,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af75bd84e34d00347b1124e6ae8569a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnnemyAI
+  idleBehavior: 0
+  patrolDistance: 3
+  patrolSpeed: 2
+  rotationInterval: 2
   viewRadius: 8
   viewAngle: 70
   targetMask:
@@ -3035,7 +3039,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   chaseSpeed: 4
-  rotationSpeed: 6
+  rotationSpeed: 4
   eye: {fileID: 0}
 --- !u!143 &7644276004071403381
 CharacterController:
@@ -3056,12 +3060,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.7, z: 2}
 --- !u!1 &9205418837040187025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3074,7 +3078,7 @@ GameObject:
   - component: {fileID: 7157775113515243711}
   - component: {fileID: 4124783151366989267}
   - component: {fileID: 6886092444954741557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Back_Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
