@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class CharaControl : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class CharaControl : MonoBehaviour
     [Header("Caméra TPS")]
     public float lookSpeed = 0.2f;
 
+    [Header("Menu de pause")]
+    public GameObject menu;
 
     private int hashWalking = -1;
     private int hashSprinting = -1;
@@ -80,6 +83,8 @@ public class CharaControl : MonoBehaviour
 
     private void HandleLook()
     {
+        if (menu != null && menu.activeSelf) return;
+
         Vector2 lookInput = controls.PlayerControls.Look.ReadValue<Vector2>();
 
         // Rotation horizontale du joueur
@@ -89,6 +94,8 @@ public class CharaControl : MonoBehaviour
 
     private void HandleMovement()
     {
+        if (menu != null && menu.activeSelf) return;
+
         // Récupération du mouvement depuis l'Event System / Input System
         Vector2 moveInput = controls.PlayerControls.Move.ReadValue<Vector2>();
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
@@ -138,6 +145,9 @@ public class CharaControl : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
+    private float lastMenuToggleTime = 0f;
+    private float menuToggleCooldown = 0.3f;
+
     private void HandleMenuInput()
     {
         bool pause = false;
@@ -148,18 +158,16 @@ public class CharaControl : MonoBehaviour
             pause = Input.GetKey(KeyCode.M);
         #endif
         
-        Debug.Log("Pause key pressed: " + pause);
-
-        if (pause)
+        if (pause && Time.time >= lastMenuToggleTime + menuToggleCooldown)
         {
-            GameObject pauseMenu = GameObject.Find("PauseMenu");
-            if (pauseMenu != null)
+            if (menu != null)
             {
-                pauseMenu.SetActive(true);
+                menu.SetActive(!menu.activeSelf);
+                lastMenuToggleTime = Time.time;
             }
             else
             {
-                Debug.LogWarning("PauseMenu introuvable dans la scène.");
+                Debug.LogWarning("Menu introuvable dans la scène.");
             }
         }
     }
